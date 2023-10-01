@@ -1,13 +1,2 @@
 <h1>Welkom</h1>
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Naam</th>
-    <th>Hobby</th>
-  </tr>
-  <tr *ngFor="let persoon of personen">
-    <td>{{ persoon.id }}</td>
-    <td>{{ persoon.naam }}</td>
-    <td>{{ persoon.hobby }}</td>
-  </tr>
-</table>
+<klasje-welkom-view [personen]="personen"></klasje-welkom-view>
