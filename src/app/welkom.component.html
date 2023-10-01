@@ -1,3 +1,18 @@
 <h1>Welkom</h1>
-<p>{{ persoon.naam }}</p>
-<p>met de leuke hobby: {{ persoon.hobby }}</p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Naam</th>
+    <th>Hobby</th>
+  </tr>
+  <tr>
+    <td>{{ persoon[0].id }}</td>
+    <td>{{ persoon[0].naam }}</td>
+    <td>{{ persoon[0].hobby }}</td>
+  </tr>
+  <tr>
+    <td>{{ persoon[1].id }}</td>
+    <td>{{ persoon[1].naam }}</td>
+    <td>{{ persoon[1].hobby }}</td>
+  </tr>
+</table>
