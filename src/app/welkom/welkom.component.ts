@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {Persoon} from "./persoon";
+import {Persoon} from "../persoon";
 
 @Component({
   selector: 'klasje-welkom',
