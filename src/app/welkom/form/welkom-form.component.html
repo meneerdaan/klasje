@@ -1,1 +1,9 @@
-<p>Hallo ik ben een form</p>
+<form [formGroup]="welkomForm" (ngSubmit)="submitWelkomform()">
+  Id: <input [formControlName]="'id'" type="number"/>
+  <br/>
+  Naam: <input [formControlName]="'naam'" type="text"/>
+  <br/>
+  Hobby: <input [formControlName]="'hobby'" type="text"/>
+  <br/>
+  <button type="submit">Voeg persoon toe</button>
+</form>

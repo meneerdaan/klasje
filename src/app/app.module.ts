@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {WelkomComponent} from "./welkom/welkom.component";
 import {WelkomTabelComponent} from "./welkom/tabel/welkom-tabel.component";
 import {WelkomFormComponent} from "./welkom/form/welkom-form.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {WelkomFormComponent} from "./welkom/form/welkom-form.component";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
