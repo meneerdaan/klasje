@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {FormBuilder} from "@angular/forms";
+import {FormBuilder, Validators} from "@angular/forms";
 import {Persoon} from "../../persoon";
 
 @Component({
@@ -9,9 +9,9 @@ import {Persoon} from "../../persoon";
 export class WelkomFormComponent {
 
   welkomForm = this.fb.group({
-    id: this.fb.control<number | null>(null),
-    naam: this.fb.control<string | null>(null),
-    hobby: this.fb.control<string | null>(null)
+    id: this.fb.control<number | null>(null, [Validators.required]),
+    naam: this.fb.control<string | null>(null, [Validators.required]),
+    hobby: this.fb.control<string | null>(null, [Validators.required])
   })
 
   constructor(private fb: FormBuilder) {
@@ -19,5 +19,6 @@ export class WelkomFormComponent {
 
   submitWelkomform() {
     console.log(this.welkomForm.value);
+    console.log(this.welkomForm.valid);
   }
 }
