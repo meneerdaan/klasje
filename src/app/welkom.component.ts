@@ -8,7 +8,7 @@ import {Persoon} from "./persoon";
 })
 export class WelkomComponent {
 
-  persoon: Persoon[] = [
+  personen: Persoon[] = [
     {
       id: 1,
       naam: 'Bas',

@@ -5,14 +5,9 @@
     <th>Naam</th>
     <th>Hobby</th>
   </tr>
-  <tr>
-    <td>{{ persoon[0].id }}</td>
-    <td>{{ persoon[0].naam }}</td>
-    <td>{{ persoon[0].hobby }}</td>
-  </tr>
-  <tr>
-    <td>{{ persoon[1].id }}</td>
-    <td>{{ persoon[1].naam }}</td>
-    <td>{{ persoon[1].hobby }}</td>
+  <tr *ngFor="let persoon of personen">
+    <td>{{ persoon.id }}</td>
+    <td>{{ persoon.naam }}</td>
+    <td>{{ persoon.hobby }}</td>
   </tr>
 </table>
