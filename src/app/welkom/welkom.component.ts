@@ -22,6 +22,6 @@ export class WelkomComponent {
   ]
 
   onVoegToe(persoon: Persoon) {
-    console.log(persoon);
+    this.personen.push(persoon);
   }
 }
