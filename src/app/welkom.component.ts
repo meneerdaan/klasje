@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {Persoon} from "./persoon";
 
 @Component({
   selector: 'klasje-welkom',
@@ -6,5 +7,9 @@ import {Component} from "@angular/core";
 })
 export class WelkomComponent {
 
-  naam = 'Daan';
+  persoon: Persoon = {
+    id: 1,
+    naam: 'Bas',
+    hobby: 'Op rotsen klimmen'
+  }
 }
