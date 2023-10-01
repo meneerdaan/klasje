@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, EventEmitter, Output} from "@angular/core";
 import {FormBuilder, Validators} from "@angular/forms";
 import {Persoon} from "../../persoon";
 
@@ -7,6 +7,8 @@ import {Persoon} from "../../persoon";
   templateUrl: './welkom-form.component.html'
 })
 export class WelkomFormComponent {
+
+  @Output() voegToe = new EventEmitter<Persoon>();
 
   welkomForm = this.fb.group({
     id: this.fb.control<number | null>(null, [Validators.required]),
@@ -18,7 +20,13 @@ export class WelkomFormComponent {
   }
 
   submitWelkomform() {
-    console.log(this.welkomForm.value);
-    console.log(this.welkomForm.valid);
+    if (this.welkomForm.valid) {
+      const persoon: Persoon = {
+        id: this.welkomForm.controls.id.value!,
+        naam: this.welkomForm.controls.naam.value!,
+        hobby: this.welkomForm.controls.hobby.value!
+      }
+      this.voegToe.emit(persoon);
+    }
   }
 }

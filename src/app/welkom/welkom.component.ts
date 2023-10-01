@@ -20,4 +20,8 @@ export class WelkomComponent {
       hobby: 'Lekker op de grond blijven'
     }
   ]
+
+  onVoegToe(persoon: Persoon) {
+    console.log(persoon);
+  }
 }
